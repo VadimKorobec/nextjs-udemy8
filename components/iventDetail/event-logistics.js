@@ -1,17 +1,17 @@
-import AddressIcon from '../icons/address-icon';
-import DateIcon from '../icons/date-icon';
-import LogisticsItem from './logistics-item';
-import styles from './event-logistics.module.css';
+import AddressIcon from "../icons/addressIcon";
+import DateIcon from "../icons/dateIcon";
+import LogisticsItem from "./logistics-item";
+import styles from "./event-logistics.module.css";
 
-const  EventLogistics =(props)=> {
+const EventLogistics = (props) => {
   const { date, address, image, imageAlt } = props;
 
-  const humanReadableDate = new Date(date).toLocaleDateString('en-US', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
+  const humanReadableDate = new Date(date).toLocaleDateString("en-US", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
   });
-  const addressText = address.replace(', ', '\n');
+  const addressText = address.replace(", ", "\n");
 
   return (
     <section className={styles.logistics}>
@@ -28,6 +28,6 @@ const  EventLogistics =(props)=> {
       </ul>
     </section>
   );
-}
+};
 
 export default EventLogistics;
